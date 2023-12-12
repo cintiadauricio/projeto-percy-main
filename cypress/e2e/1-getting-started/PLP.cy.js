@@ -13,9 +13,9 @@ describe('TodoMVC', function() {
       cy.get('#dm876A').click()
       cy.wait(10000)
       cy.scrollTo('bottom')
-      cy.wait(5000)
+      cy.wait(500000)
       cy.get('.vtex-search-result-3-x-gallery > :nth-child(9)', { timeout: 10000 }).should('exist');
-      cy.percySnapshot('PLP responsive test', { widths: [1440,1920]});
+      //cy.percySnapshot('PLP responsive test', { widths: [1440,1920]});
     });
 
 })

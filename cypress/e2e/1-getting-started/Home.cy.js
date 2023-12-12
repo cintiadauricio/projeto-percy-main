@@ -8,12 +8,12 @@ describe('TodoMVC', function() {
     cy.visit('https://www.paguemenos.com.br')
     })
     it('Print Home', function() {
-      cy.wait(600000)
+      cy.wait(500)
       cy.scrollTo('bottom')
       cy.get('#dm876A').click()
-      cy.wait(600000)
+      cy.wait(10000)
       cy.scrollTo('bottom')
-      cy.wait(600000)
+      cy.wait(1600000)
       cy.percySnapshot('Home responsive test', { widths: [1440,1920]});
     });
 

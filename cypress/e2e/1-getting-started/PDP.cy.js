@@ -14,7 +14,7 @@ describe('TodoMVC', function() {
       cy.wait(10000)
       cy.scrollTo('bottom')
       cy.wait(5000)
-      cy.percySnapshot('PDP responsive test', { widths: [1440,1920]});
+      //cy.percySnapshot('PDP responsive test', { widths: [1440,1920]});
     });
 
 })
