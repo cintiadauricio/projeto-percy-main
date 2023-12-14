@@ -4,7 +4,9 @@
   "description": "Automação de Testes visuais com Cypress e Percy",
   "main": "index.js",
   "scripts": {
-    "test": "percy exec -- cypress run"
+    "test": "percy exec -- cypress run",
+    "home": "npx cypress run --spec cypress/e2e/Home.cy.js",
+    "percy-home": "percy exec -- cypress run --spec cypress/e2e/Home.cy.js"
   },
   "keywords": [
     "cypress",

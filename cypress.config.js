@@ -1,13 +1,17 @@
-const { defineConfig } = require('cypress')
+const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  video: false,
+  setupNodeEvents(on, config) {
+    return on, config;
+  },
+
   e2e: {
-    setupNodeEvents(on, config) {
-      return require('./cypress/plugins/index.js')(on, config)
-    },
-    baseUrl: 'https://www.paguemenos.com.br/fralda-huggies-suprecare-hiper-tamanho-g-com-66-unidades/p?workspace=buildmigration',
-     },
-      viewportWidth: 1440,
-      viewportHeight: 900,
-})
+    specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
+    experimentalRunAllSpecs: true,
+  },
+  video: false,
+  chromeWebSecurity: false,
+  modifyObstructiveCode: false,
+  viewportWidth: 1440,
+  viewportHeight: 900,
+});
